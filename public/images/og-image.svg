@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad-ogimagesvg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3dde0" />
+      <stop offset="100%" stop-color="#e9bcc3" />
+    </linearGradient>
+    <filter id="blur-ogimagesvg"><feGaussianBlur stdDeviation="60" /></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad-ogimagesvg)" />
+  <g filter="url(#blur-ogimagesvg)">
+    <path d="M 1054.8645644448582 126 L 993.476835167772 219.476835167772 L 900 310.2930104860425 L 763.1489615905837 262.8510384094164 L 760.9421777073336 126.00000000000001 L 798.2806969303385 24.28069693033862 L 900 -71.09597262417753 L 1026.2756962853273 -0.27569628532734214 L 1030.1088031352338 125.99999999999997  Z" fill="#cf9aa4" opacity="0.45" />
+    <path d="M 395.3176966377931 535.5 L 393.20050583080024 688.7005058308002 L 240 744.2278297448049 L 134.3364178707355 641.1635821292646 L 67.35855238809921 535.5 L 80.22406344137244 375.72406344137244 L 239.99999999999997 346.49218744946404 L 342.6814073431085 432.81859265689144 L 433.44825059990353 535.5  Z" fill="#ffffff" opacity="0.35" />
+  </g>
+  
+  <g transform="translate(600 315) scale(4.846153846153846)" fill="none" stroke="#2b2926" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <rect x="-24" y="-18" width="48" height="36" rx="4" />
+    <circle cx="-10" cy="-6" r="4.5" />
+    <path d="M -24 12 L -6 -2 L 6 8 L 16 0 L 24 10" />
+  </g>
+</svg>

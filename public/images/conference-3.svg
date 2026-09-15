@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="grad-conference3svg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ddd6e9" />
+      <stop offset="100%" stop-color="#c3b6da" />
+    </linearGradient>
+    <filter id="blur-conference3svg"><feGaussianBlur stdDeviation="45" /></filter>
+  </defs>
+  <rect width="900" height="700" fill="url(#grad-conference3svg)" />
+  <g filter="url(#blur-conference3svg)">
+    <path d="M 898.6212885816171 140 L 805.1084082813414 270.10840828134144 L 675 283.6559737794241 L 538.0527379889611 276.9472620110389 L 453.87097616200566 140.00000000000003 L 559.0082374953803 24.008237495380286 L 675 -11.292729099699727 L 824.6723868697338 -9.672386869733884 L 883.8548860999889 139.99999999999994  Z" fill="#cf9aa4" opacity="0.45" />
+    <path d="M 373.58070555607264 595 L 296.846043959715 711.846043959715 L 180 825.3662631075531 L 8.936201988229499 766.0637980117706 L 6.17772213416697 595 L 52.85087116292323 467.8508711629232 L 179.99999999999994 348.63003421977805 L 337.8446203566591 437.15537964334084 L 342.6360039190421 595  Z" fill="#ffffff" opacity="0.35" />
+  </g>
+  
+  <g transform="translate(450 350) scale(5.384615384615385)" fill="none" stroke="#2b2926" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <rect x="-24" y="-18" width="48" height="36" rx="4" />
+    <circle cx="-10" cy="-6" r="4.5" />
+    <path d="M -24 12 L -6 -2 L 6 8 L 16 0 L 24 10" />
+  </g>
+</svg>
