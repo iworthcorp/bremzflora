@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Testimonials } from "@/components/Testimonials";
+import { AnchorSection } from "@/components/AnchorSection";
 
 export const metadata: Metadata = {
   title: "Testimonials",
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function TestimonialsPage() {
-  return <Testimonials />;
+  return (
+    <>
+      <Testimonials />
+      <AnchorSection id="vlogs" eyebrow="Testimonials" title="Vlogs" />
+    </>
+  );
 }

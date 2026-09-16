@@ -11,12 +11,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
-    ...siteConfig.nav.map((item) => ({
-      url: `${siteConfig.url}${item.href}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
+    ...siteConfig.nav.flatMap((item) => [
+      {
+        url: `${siteConfig.url}${item.href}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      },
+      ...("children" in item
+        ? item.children
+            .filter((child) => !child.href.includes("#"))
+            .map((child) => ({
+              url: `${siteConfig.url}${child.href}`,
+              lastModified: now,
+              changeFrequency: "monthly" as const,
+              priority: 0.5,
+            }))
+        : []),
+    ]),
     {
       url: `${siteConfig.url}/privacy-policy`,
       lastModified: now,
