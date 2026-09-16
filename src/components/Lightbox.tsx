@@ -4,10 +4,17 @@ import { useCallback, useEffect } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import type { GalleryImage } from "@/data/gallery";
+
+export type LightboxImage = {
+  id: string;
+  src: string;
+  width: number;
+  height: number;
+  caption: string;
+};
 
 type LightboxProps = {
-  images: GalleryImage[];
+  images: LightboxImage[];
   index: number | null;
   onClose: () => void;
   onIndexChange: (index: number) => void;
@@ -65,28 +72,32 @@ export function Lightbox({ images, index, onClose, onIndexChange }: LightboxProp
             <X size={20} />
           </button>
 
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              goTo(index! - 1);
-            }}
-            aria-label="Previous image"
-            className="absolute left-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
-          >
-            <ChevronLeft size={22} />
-          </button>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              goTo(index! + 1);
-            }}
-            aria-label="Next image"
-            className="absolute right-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
-          >
-            <ChevronRight size={22} />
-          </button>
+          {images.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goTo(index! - 1);
+                }}
+                aria-label="Previous image"
+                className="absolute left-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
+              >
+                <ChevronLeft size={22} />
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goTo(index! + 1);
+                }}
+                aria-label="Next image"
+                className="absolute right-3 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
+              >
+                <ChevronRight size={22} />
+              </button>
+            </>
+          )}
 
           <motion.figure
             key={current.id}
@@ -94,16 +105,16 @@ export function Lightbox({ images, index, onClose, onIndexChange }: LightboxProp
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.25 }}
-            className="max-h-[85vh] max-w-3xl"
+            className="flex max-h-[80vh] max-w-[80vw] flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative max-h-[75vh] overflow-hidden rounded-2xl">
+            <div className="relative max-h-[70vh] max-w-[80vw] overflow-hidden rounded-2xl">
               <Image
                 src={current.src}
                 alt={current.caption}
                 width={current.width}
                 height={current.height}
-                className="max-h-[75vh] w-auto object-contain"
+                className="h-auto max-h-[70vh] w-auto max-w-[80vw] object-contain"
               />
             </div>
             <figcaption className="mt-4 text-center text-sm text-white/80">
