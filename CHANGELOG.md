@@ -20,6 +20,9 @@ All notable changes to this project are documented in this file.
 - Footer and nav config updated to point Gallery at `/testimonials#gallery`.
 - Package CTAs and the shared Booking CTA relabeled to "Book Now".
 
+### Fixed
+- Gallery filtering: switching category filters could leave the filtered image stuck invisible (opacity 0, blurred). The grid's entrance animation only fired once ever (`whileInView` + `viewport: { once: true }`), so items mounted by a later filter change never got animated in. Fixed by keying the grid on the active category so it remounts, and its entrance animation re-triggers, on every filter change.
+
 ### Removed
 - Standalone `/gallery` page content (route now redirects to `/testimonials#gallery`).
 

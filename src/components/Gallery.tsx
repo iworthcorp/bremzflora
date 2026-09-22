@@ -64,7 +64,10 @@ export function Gallery() {
           ))}
         </div>
 
-        <StaggerGrid className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3">
+        <StaggerGrid
+          key={activeCategory}
+          className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3"
+        >
           {filtered.map((image, i) => (
             <StaggerItem key={image.id} className="mb-5 break-inside-avoid">
               <button
