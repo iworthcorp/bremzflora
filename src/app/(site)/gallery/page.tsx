@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import { Gallery } from "@/components/Gallery";
-
-export const metadata: Metadata = {
-  title: "Gallery",
-  description:
-    "Moments and milestones from conferences, workshops, and behind the scenes with Bremz Flora.",
-};
+import { redirect } from "next/navigation";
 
 export default function GalleryPage() {
-  return <Gallery />;
+  redirect("/testimonials#gallery");
 }

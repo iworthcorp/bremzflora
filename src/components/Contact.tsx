@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Building2, Phone, User } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ContactForm } from "@/components/ContactForm";
@@ -10,6 +10,9 @@ import {
   TikTokIcon,
 } from "@/components/icons/SocialIcons";
 import { siteConfig } from "@/lib/site-config";
+
+const contactNumber = "0906 359 1597";
+const contactTel = "+639063591597";
 
 const socialLinks = [
   { label: "LinkedIn", href: siteConfig.social.linkedin, icon: LinkedinIcon },
@@ -27,12 +30,15 @@ export function Contact() {
             <span className="mx-auto">Contact</span>
           </SectionLabel>
           <h2 className="mt-4 font-serif text-3xl font-semibold text-charcoal sm:text-4xl">
-            Let&apos;s Create Something Meaningful
+            Let&apos;s Connect
           </h2>
           <p className="mt-4 text-charcoal-soft">
-            Whether you&apos;re looking to strengthen your brand, improve
-            your digital presence, develop a marketing strategy, or explore
-            a collaboration, I&apos;d love to hear from you.
+            Interested in learning more about iWorth International
+            Corporation?
+          </p>
+          <p className="mt-2 text-charcoal-soft">
+            Contact Bremen Fomaneg-Flora for inquiries about the platform,
+            packages, services, activities, and community.
           </p>
         </AnimatedSection>
 
@@ -41,26 +47,44 @@ export function Contact() {
             <div className="space-y-6 rounded-3xl border border-charcoal/8 bg-white/60 p-8">
               <div className="flex items-start gap-4">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blush/70 text-rose-dark">
-                  <Mail size={18} />
+                  <Phone size={18} />
                 </span>
                 <div>
-                  <p className="text-xs font-medium text-charcoal-soft">Email</p>
+                  <p className="text-xs font-medium text-charcoal-soft">
+                    Contact Number
+                  </p>
                   <a
-                    href={`mailto:${siteConfig.email}`}
+                    href={`tel:${contactTel}`}
                     className="text-sm font-medium text-charcoal hover:text-rose-dark"
                   >
-                    {siteConfig.email}
+                    {contactNumber}
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-lavender/70 text-charcoal">
-                  <MapPin size={18} />
+                  <User size={18} />
                 </span>
                 <div>
-                  <p className="text-xs font-medium text-charcoal-soft">Location</p>
+                  <p className="text-xs font-medium text-charcoal-soft">
+                    Contact Person
+                  </p>
                   <p className="text-sm font-medium text-charcoal">
-                    {siteConfig.location}
+                    Bremen Fomaneg-Flora
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sage/70 text-charcoal">
+                  <Building2 size={18} />
+                </span>
+                <div>
+                  <p className="text-xs font-medium text-charcoal-soft">
+                    Branch
+                  </p>
+                  <p className="text-sm font-medium text-charcoal">
+                    iWorth International Corporation – Baguio, Benguet
+                    Branch
                   </p>
                 </div>
               </div>

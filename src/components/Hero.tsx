@@ -9,15 +9,13 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Phone, Sparkles } from "lucide-react";
 import { OrganicShape } from "@/components/ui/OrganicShape";
+import { FacebookIcon } from "@/components/icons/SocialIcons";
 
-const expertiseList = [
-  "Digital Marketing",
-  "Brand Strategy",
-  "Content",
-  "Social Media",
-  "Business Development",
+const contactDetails = [
+  { icon: Phone, label: "0906 359 1597" },
+  { icon: FacebookIcon, label: "Bremz Fomaneg Flora" },
 ];
 
 export function Hero() {
@@ -70,23 +68,39 @@ export function Hero() {
             {...fadeUp(0)}
             className="text-xs font-semibold tracking-[0.25em] text-rose-dark uppercase"
           >
-            Digital Marketing • Branding • Business Development
+            iWorth International Corporation • Baguio, Benguet Branch
+          </motion.p>
+
+          <motion.p
+            {...fadeUp(0.05)}
+            className="mt-3 text-sm font-medium tracking-wide text-charcoal-soft"
+          >
+            Bremen Fomaneg-Flora
           </motion.p>
 
           <motion.h1
             {...fadeUp(0.1)}
             className="mt-6 font-serif text-4xl leading-[1.1] font-semibold text-balance text-charcoal sm:text-5xl lg:text-6xl"
           >
-            Building Brands That Connect, Grow &amp; Make an Impact.
+            Build • Grow • Connect • Succeed
           </motion.h1>
 
           <motion.p
-            {...fadeUp(0.2)}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-charcoal-soft"
+            {...fadeUp(0.15)}
+            className="mt-6 max-w-xl font-serif text-xl text-charcoal"
           >
-            Helping businesses and personal brands turn ideas into meaningful
-            digital experiences through strategic marketing, compelling
-            content, and intentional brand building.
+            Your All-in-One Platform for Digital Business, Entrepreneurship
+            &amp; Personal Growth
+          </motion.p>
+
+          <motion.p
+            {...fadeUp(0.2)}
+            className="mt-4 max-w-xl text-lg leading-relaxed text-charcoal-soft"
+          >
+            Welcome to iWorth International Corporation – Benguet Branch,
+            your local gateway to a connected ecosystem of digital business
+            opportunities, entrepreneurial learning, community, and personal
+            development.
           </motion.p>
 
           <motion.div {...fadeUp(0.3)} className="mt-9 flex flex-wrap gap-4">
@@ -94,13 +108,13 @@ export function Hero() {
               href="#booking"
               className="rounded-full bg-charcoal px-8 py-3.5 text-sm font-medium text-ivory transition-transform duration-200 hover:-translate-y-0.5 hover:bg-rose-dark"
             >
-              Book a Session
+              Book Now
             </Link>
             <Link
-              href="#expertise"
+              href="/platform"
               className="rounded-full border border-charcoal/20 px-8 py-3.5 text-sm font-medium text-charcoal transition-colors duration-200 hover:border-rose-dark hover:text-rose-dark"
             >
-              Explore My Work
+              Explore Platform
             </Link>
           </motion.div>
         </div>
@@ -121,7 +135,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-[3rem] rounded-tr-[6rem] border border-white/60 shadow-[0_30px_60px_-20px_rgba(114,74,88,0.35)]">
             <Image
               src="/images/hero-portrait.svg"
-              alt="Portrait of Bremz Flora"
+              alt="Bremen Fomaneg-Flora, iWorth International Corporation, Baguio, Benguet Branch"
               width={900}
               height={1100}
               priority
@@ -136,14 +150,14 @@ export function Hero() {
             <div className="mb-2 flex items-center gap-2">
               <Sparkles size={16} className="text-rose-dark" />
               <p className="font-serif text-sm font-semibold text-charcoal">
-                5+ Areas of Expertise
+                Get in Touch
               </p>
             </div>
-            <ul className="space-y-1 text-xs text-charcoal-soft">
-              {expertiseList.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-rose-dark" />
-                  {item}
+            <ul className="space-y-2 text-xs text-charcoal-soft">
+              {contactDetails.map(({ icon: Icon, label }) => (
+                <li key={label} className="flex items-center gap-2">
+                  <Icon size={14} className="text-rose-dark" />
+                  {label}
                 </li>
               ))}
             </ul>

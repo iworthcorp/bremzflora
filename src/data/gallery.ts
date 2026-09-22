@@ -1,10 +1,13 @@
 export type GalleryCategory =
-  | "Conferences"
-  | "Speaking"
-  | "Branding"
-  | "Workshops"
-  | "Behind the Scenes"
-  | "Events";
+  | "Business Conferences"
+  | "Entrepreneurial Events"
+  | "Community Gatherings"
+  | "Training Sessions"
+  | "Team Activities"
+  | "Product Presentations"
+  | "Networking Events"
+  | "Business Milestones"
+  | "Benguet Branch Activities";
 
 export type GalleryImage = {
   id: string;
@@ -21,81 +24,84 @@ export const galleryImages: GalleryImage[] = [
     src: "/images/gallery-1.svg",
     width: 900,
     height: 1200,
-    category: "Speaking",
-    caption: "Opening keynote at the Digital Transformation & Brand Growth Summit.",
+    category: "Business Conferences",
+    caption: "Business conference session with the iWorth community.",
   },
   {
     id: "g2",
     src: "/images/gallery-2.svg",
     width: 900,
     height: 700,
-    category: "Behind the Scenes",
-    caption: "Prepping talking points before a client strategy session.",
+    category: "Entrepreneurial Events",
+    caption: "Entrepreneurial event exploring digital business opportunities.",
   },
   {
     id: "g3",
     src: "/images/gallery-3.svg",
     width: 900,
     height: 900,
-    category: "Branding",
-    caption: "Moodboarding a brand identity refresh with the design team.",
+    category: "Community Gatherings",
+    caption: "Community gathering with iWorth members and partners.",
   },
   {
     id: "g4",
     src: "/images/gallery-4.svg",
     width: 900,
     height: 1300,
-    category: "Conferences",
-    caption: "Panel discussion on personal branding for business leaders.",
+    category: "Training Sessions",
+    caption: "Hands-on training session for aspiring entrepreneurs.",
   },
   {
     id: "g5",
     src: "/images/gallery-5.svg",
     width: 900,
     height: 780,
-    category: "Workshops",
-    caption: "Leading a content strategy workshop for founders.",
+    category: "Team Activities",
+    caption: "Team activity with the Baguio, Benguet Branch.",
   },
   {
     id: "g6",
     src: "/images/gallery-6.svg",
     width: 900,
     height: 1000,
-    category: "Events",
-    caption: "Networking after the Women in Business Leadership Forum.",
+    category: "Product Presentations",
+    caption: "Product presentation to the iWorth community.",
   },
   {
     id: "g7",
     src: "/images/gallery-7.svg",
     width: 900,
     height: 700,
-    category: "Behind the Scenes",
-    caption: "Reviewing campaign analytics ahead of a client presentation.",
+    category: "Networking Events",
+    caption: "Networking event with entrepreneurs and business owners.",
   },
   {
     id: "g8",
     src: "/images/gallery-8.svg",
     width: 900,
     height: 1150,
-    category: "Speaking",
-    caption: "Closing remarks at the Startup Growth Roundtable.",
+    category: "Business Milestones",
+    caption: "Celebrating a business milestone with the community.",
   },
   {
     id: "g9",
     src: "/images/gallery-9.svg",
     width: 900,
     height: 900,
-    category: "Workshops",
-    caption: "Hands-on brand voice exercise with workshop attendees.",
+    category: "Benguet Branch Activities",
+    caption: "Benguet Branch activity with iWorth members.",
   },
 ];
 
 export const galleryCategories: (GalleryCategory | "All")[] = [
   "All",
-  "Conferences",
-  "Speaking",
-  "Branding",
-  "Workshops",
-  "Behind the Scenes",
-  "Events",
+  "Business Conferences",
+  "Entrepreneurial Events",
+  "Community Gatherings",
+  "Training Sessions",
+  "Team Activities",
+  "Product Presentations",
+  "Networking Events",
+  "Business Milestones",
+  "Benguet Branch Activities",
 ];

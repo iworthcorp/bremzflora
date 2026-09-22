@@ -6,11 +6,21 @@ export function AnchorSection({
   id,
   eyebrow,
   title,
+  description,
 }: {
   id: string;
   eyebrow: string;
   title: string;
+  description?: string | string[];
 }) {
+  const paragraphs = description
+    ? Array.isArray(description)
+      ? description
+      : [description]
+    : [
+        "This section is coming soon. Check back shortly for more details.",
+      ];
+
   return (
     <section
       id={id}
@@ -24,15 +34,22 @@ export function AnchorSection({
           <h2 className="mt-4 font-serif text-2xl font-semibold text-charcoal sm:text-3xl">
             {title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-charcoal-soft">
-            This section is coming soon. Check back shortly for more details.
-          </p>
-          <Link
-            href="/contact"
-            className="mt-6 inline-block rounded-full border border-charcoal/15 px-6 py-2.5 text-sm font-medium text-charcoal transition-colors hover:border-rose-dark hover:text-rose-dark"
-          >
-            Get in Touch
-          </Link>
+          {paragraphs.map((paragraph, i) => (
+            <p
+              key={i}
+              className="mt-4 text-base leading-relaxed text-charcoal-soft"
+            >
+              {paragraph}
+            </p>
+          ))}
+          {!description && (
+            <Link
+              href="/contact"
+              className="mt-6 inline-block rounded-full border border-charcoal/15 px-6 py-2.5 text-sm font-medium text-charcoal transition-colors hover:border-rose-dark hover:text-rose-dark"
+            >
+              Get in Touch
+            </Link>
+          )}
         </AnimatedSection>
       </div>
     </section>

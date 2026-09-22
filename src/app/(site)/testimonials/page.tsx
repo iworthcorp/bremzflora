@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import { Testimonials } from "@/components/Testimonials";
-import { AnchorSection } from "@/components/AnchorSection";
+import { Gallery } from "@/components/Gallery";
+import { VlogsSection } from "@/components/VlogsSection";
 
 export const metadata: Metadata = {
   title: "Testimonials",
   description:
-    "Kind words from the brands and businesses Bremz Flora has worked with.",
+    "Real experiences and stories from iWorth International Corporation community members, entrepreneurs, clients, and partners.",
 };
 
 export default function TestimonialsPage() {
   return (
     <>
       <Testimonials />
-      <AnchorSection id="vlogs" eyebrow="Testimonials" title="Vlogs" />
+      <Gallery />
+      <VlogsSection />
     </>
   );
 }

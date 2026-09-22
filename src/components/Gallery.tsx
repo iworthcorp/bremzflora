@@ -27,15 +27,24 @@ export function Gallery() {
   );
 
   return (
-    <section id="gallery" className="px-6 py-24 lg:px-10 lg:py-32">
+    <section
+      id="gallery"
+      className="scroll-mt-24 border-t border-charcoal/8 px-6 py-24 lg:px-10 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl">
         <AnimatedSection className="mx-auto max-w-xl text-center">
           <SectionLabel>
             <span className="mx-auto">Gallery</span>
           </SectionLabel>
           <h2 className="mt-4 font-serif text-3xl font-semibold text-charcoal sm:text-4xl">
-            Moments &amp; Milestones
+            Moments That Matter
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-charcoal-soft">
+            Showcase memorable moments from business conferences,
+            entrepreneurial events, community gatherings, training sessions,
+            team activities, product presentations, networking events,
+            business milestones, and Benguet Branch activities.
+          </p>
         </AnimatedSection>
 
         <div className="mt-10 flex flex-wrap justify-center gap-2">

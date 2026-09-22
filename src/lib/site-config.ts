@@ -76,7 +76,7 @@ export const siteConfig = {
       label: "Testimonials",
       href: "/testimonials",
       children: [
-        { label: "Gallery", href: "/gallery" },
+        { label: "Gallery", href: "/testimonials#gallery" },
         { label: "Vlogs", href: "/testimonials#vlogs" },
       ],
     },
