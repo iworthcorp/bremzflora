@@ -15,10 +15,10 @@ export function About() {
           />
           <div className="relative overflow-hidden rounded-[2.5rem] rounded-bl-[6rem] shadow-[0_30px_60px_-25px_rgba(114,74,88,0.3)]">
             <Image
-              src="/images/about-portrait.svg"
-              alt="iWorth International Corporation, Baguio, Benguet Branch"
-              width={900}
-              height={1080}
+              src="/images/bremzflora.jpeg"
+              alt="Bremen Fomaneg-Flora, iWorth International Corporation, Baguio, Benguet Branch"
+              width={1086}
+              height={1448}
               className="h-full w-full object-cover"
             />
           </div>

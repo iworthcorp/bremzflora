@@ -134,10 +134,10 @@ export function Hero() {
 
           <div className="relative overflow-hidden rounded-[3rem] rounded-tr-[6rem] border border-white/60 shadow-[0_30px_60px_-20px_rgba(114,74,88,0.35)]">
             <Image
-              src="/images/hero-portrait.svg"
+              src="/images/bremzflora.jpeg"
               alt="Bremen Fomaneg-Flora, iWorth International Corporation, Baguio, Benguet Branch"
-              width={900}
-              height={1100}
+              width={1086}
+              height={1448}
               priority
               className="h-full w-full object-cover"
             />

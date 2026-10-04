@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented in this file.
 
+## 2026-10-04
+
+### Added
+- Real portrait photo of Bremen Fomaneg-Flora (`public/images/bremzflora.jpeg`).
+
+### Changed
+- Homepage Hero: portrait now uses `bremzflora.jpeg` instead of the `hero-portrait.svg` placeholder.
+- About page welcome banner: portrait now uses `bremzflora.jpeg` instead of the `about-portrait.svg` placeholder; alt text updated to name Bremen Fomaneg-Flora.
+
 ## 2026-09-22
 
 ### Added
